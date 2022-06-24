@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 js 문법</title>
+  <script>
+    // var age = prompt("나이 입력", "");
+    // document.write(`<p>당신의 나이는 ${age}살 입니다.`)
+
+      // document.write(`<div style="color: red;">자바스크립트 스타일시트</div>`);
+      // js에서 스타일시트를 변경했을 경우, 개발자 도구에 element.style가 출력된다.
+  </script>
+</head>
+<body>
+  <button>변경</button>
+  <h1>제목을 입력하세요</h1>
+  <script>
+    const btn = document.querySelector("button");
+    const heading = document.querySelector("h1");
+    btn.addEventListener("click", () => {
+      heading.innerText = "Grand Hyatt Hotel"
+    })
+  </script>
+</body>
+</html>
