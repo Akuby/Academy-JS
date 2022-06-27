@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+  <script>
+    let tv = new Object();
+    tv.color = "white";
+    tv.price = 1000000;
+    tv.info = function () {
+      document.write("tv 색상: " + tv.color + "<br>");
+      document.write("tv 가격: " + tv.price + "<br>");
+    }
+    console.log(tv);
+    tv.info();
+
+    let car = Object();
+    car = { 
+      color : "black", 
+      price : 3000000, 
+      info : function() {
+      document.write(`car 색상: ${car.color} <br>`);
+      document.write(`car 가격: ${car.price} <br>`);
+    }};
+
+    car.info();
+</script>
+</head>
+<body>
+  
+</body>
+</html>

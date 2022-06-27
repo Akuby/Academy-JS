@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수와 상수</title>
+  <script>
+    // variable
+    var a = 10;
+    console.log(a) // 10
+    a = 20;
+    console.log(a) // 20
+    var a = 30;
+    console.log(a) 
+    // 오류 없이 그냥 30이 할당돼버린다.
+    // 메모리 할당이 달라지므로, 위의 a와 지금의 a는 다른 변수다.
+    // 그러나 이렇게 되면 오류 가능성이 생기므로 나온 변수가...
+
+    // let
+    let b = 10;
+    console.log(b);
+    b = 20;
+    console.log(b);
+    // let b = 30; (오류 떠서 일단 주석처리)
+    console.log(b);
+    // 중복 선언의 오류를 검출해낸다!
+    // 선언 전 undefined가 뜨는 호이스팅 문제도 없다!
+
+    // const
+    console.log(ab);
+    const ab = 10;
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

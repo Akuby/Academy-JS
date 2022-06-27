@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>string</title>
+  <script>
+    let str = "hello";
+    console.log(str);
+    let str2 = "world!";
+    console.log(str2);
+
+    // concat()
+    let str3 = str.concat(" ").concat(str2);
+    console.log(str3);
+    let str4 = str + " " + str2;
+    console.log(str4);
+    let str5 = `${str} ${str2}`;
+    console.log(str5);
+
+    // charAt()
+    let alpha = "ABCDEabcde";
+    console.log(alpha.length);
+    console.log(alpha.charAt(0)); // A
+    console.log(alpha.charAt(9)); // e
+    console.log(alpha.charAt(10)); // 없는 인덱스는 빈문자열 출력
+    console.log(alpha.charAt(-1)); // 없는 인덱스는 빈문자열 출력
+    // 스트링.charAt(인덱스넘버) : 스트링 내에서 인덱스 넘버번째의 글자를 출력.
+    
+    console.log(alpha[0]); // 문자열을 배열이기 때문에, 이렇게도 출력 가능.
+    console.log(alpha[-1]); // charAt과 다르게, 빈문자열이 아닌 undefined 출력.
+
+    //charAt으로 뒤에서 5번째 문자열 반환하시오
+    console.log(alpha.charAt(alpha.length - 5));
+
+    let str6 = "I love JavaScript!";
+    console.log(str6.length);
+
+    // substr(), substring()
+    console.log(str6.substring(0, 6)); // 0번부터 6번까지!
+    console.log(str6.substr(0, 6)); //0번부터 6개!
+    console.log(str6.substring(7));
+    console.log(str6.substr(7));
+    // 이 둘의 가시적인 차이점
+    console.log(str6.substring(7, 11)); // 7번부터 11번까지!
+    console.log(str6.substr(7, 4)); // 7번부터 4개!
+
+    
+    // indexOf()
+    let str7 = "javajava";
+    console.log(str7.indexOf("java")); // 제일 처음 찾는 인덱스
+    console.log(str7.lastIndexOf("java")); // 제일 마지막에 찾은 인덱스
+    console.log(str7.indexOf("없는 문자")); // 못 찾으면 -1 출력
+
+    // 연습
+    let str8 = "I love asdfadfadsfadfadfdfadfdJavascript!";
+    console.log(str8.substr(str8.length-1, 1)); // 한 자리만 찾을 때는 , 1 생략 가능
+    
+    
+    
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

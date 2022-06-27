@@ -7,6 +7,34 @@
   <title>변수타입</title>
 </head>
 <body>
-  
+  <script>
+    var num = 10;
+    var str = "홍길동";
+    var state = true;
+    var arr = ["사과", "배", "참외"];
+    var obj = { name: "홍길동", age: 25};
+
+    console.log(num, typeof(num));
+    console.log(str, typeof(str));
+    console.log(state, typeof(state));
+    console.log(arr, typeof(arr));
+    console.log(obj, typeof(obj));
+    // 배열은 object.
+
+    var twice;
+    console.log(twice, typeof(twice));
+    // undefined가 출력.
+
+    var twice2;
+    twice2 = null;
+    console.log(twice2, typeof(twice2));
+    // null이지만 데이터형은 object.
+
+    var num2 = new Number();
+    // 0이 들어가는구나!
+    console.log(num2, typeof(num2));
+    var str2 = new String("ㅎㅎ");
+    console.log(str2, typeof(str2));
+  </script>
 </body>
 </html>

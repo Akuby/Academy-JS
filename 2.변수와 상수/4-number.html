@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let a = 100;
+    let b = 3.14;
+    let c = 1e-3;
+    console.log(a, typeof(a));
+    console.log(b, typeof(b));
+    console.log(c, typeof(c));
+
+    // let height = Number(prompt("키를 입력하시오", "숫자만 입력"));
+    // console.log(height, typeof(height));
+    
+    let height2 = prompt("키를 입력하시오", "cm 단위까지 입력");
+    console.log(height2, typeof(height2));
+    console.log( Number(height2 + 100) );
+    // Number() 통째로 number로 변환 시도
+    console.log( parseFloat(height2) + 100 );
+    // parseFloat이나 Int는 숫자 뒤에 나오는 문자부터 버리고, 숫자로 바꿔 출력.
+    // 123a.5는 123 출력
+    // a123은 문자로 시작하기 때문에 NaN 출력
+
+    // 예제
+    
+    // str1을 정수로 변환하여 pi_int로 출력하시오.
+    var str1 = "3.141592는 Pi의 근삿값입니다";
+    var pi_int = parseInt(str1);
+    console.log(pi_int);
+
+    // str2을 실수로 변환하여 pi_float로 출력하시오.
+    var str2 = "3.141592는 Pi의 근삿값입니다";
+    var pi_float = parseFloat(str2);
+    console.log(pi_float);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

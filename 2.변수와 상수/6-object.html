@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+  <script>
+    /*
+    객체란 복잡한 자료를 표현할 때 쓰는 자료형.
+    데이터 타입은 object.
+    속성과 값을 쌍으로 가지는 집합. (key: value)
+    */
+
+    let people = {};
+    // 객체.키 = 밸류
+    // people.name = "홍길동";
+    // people.age = 20;
+    // people.job = "도적"
+    people = { name : "홍길동", age : 20, job : "도적"}
+    console.log(people, typeof(people))
+    console.log(people.length); // 객체는 길이값은 length 출력 불가
+    console.log(Object.keys(people)) // 객체의 키 값을 배열로 반환
+    
+    // 키 값을 교체
+    people["name"] = "이순신"
+    people.age = 35;
+    people.job = "장군";
+    console.log(people);
+    console.log(people.name);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
