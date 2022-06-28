@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교연산자</title>
+  <script>
+    // 비교연산자 or 관계연산자
+    // 두개의 피연산자를 비교하는 연산자
+    let a = 1, b = 2;
+    console.log(
+      a>b,
+      a<b,
+      a>=b,
+      a<=b,
+      a==b,
+      a==a,
+      a!=b,
+      b!=b
+      );
+    
+    let aa = 1, bb = "1";
+    console.log(
+      aa==bb,
+      aa===bb
+    )
+
+    let str1 = "a", str2 = "b";
+    console.log( str1 > str2 );
+    console.log( str1 < str2 ); // 유니코드 값으로 비교
+
+    let s1 = "abcd", s2 = "abd";
+    console.log( str1 > str2 );
+    console.log( str1 < str2 ); // 앞에서 순서대로 한 글자씩 비교
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

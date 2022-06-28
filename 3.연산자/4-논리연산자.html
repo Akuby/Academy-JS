@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>논리연산자</title>
+  <script>
+    // 두개 이상의 비교(관계)연산자의 값을 이용하여 boolean 값으로 반환
+    // &&, ||, 
+    let a = 1,
+      b = 2,
+      c = 3,
+      d = 4;
+
+    console.log(a < b)
+    console.log(c < d)
+    console.log(a < b && c < d) // true
+    console.log(a < b && c > d) // false
+    console.log(a > b && c > d) // 둘다 거짓이면 거짓.
+
+    console.log(a < b || c < d) // true
+    console.log(a < b || c > d) // true
+    console.log(a > b || c > d) // false
+
+    console.log( !(a>b) ); // true
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
