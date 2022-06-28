@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매개변수 활용</title>
+  <style>
+    h1 {
+      width: 300px;
+      border: 1px solid #000;
+      transition: 1s;
+    }
+  </style>
+</head>
+<body>
+  <h1>제목박스크기변경하기</h1>
+  <button>500</button>
+  <script>
+    const h = document.querySelector("h1")
+    const btn = document.querySelector("button")
+    let num = btn.innerText;
+
+    function change (width) { // 함수의 위치는 상관 없다고 한다...
+      h.style.width = `${width}px`
+    }
+
+    function change1 () {
+      console.log("change1");
+    }
+
+    // btn.addEventListener("click", () => {
+    //   change(num);
+    // });
+    
+    // btn.addEventListener("click", change1); 
+    // 매개변수가 없으면, 함수 통째로 인자로 전달. 이렇게!
+    btn.addEventListener("click", function change1 () {
+      console.log("change1");
+    })
+    btn.addEventListener("click", function() {change(num)})
+    // change라는 함수를 실행하는 함수를 넣어준다 ( 콜백 )
+    // 왜냐면, change는 인자를 받아서 작동하는 함수인데
+    // 여기서 num 같은 인자를 넣어주면, 호출이 되어버리기 때문에
+    // 함수가 들어갈 자리에 값이 들어가서 오류가 일어난다.
+</script>
+</body>
+</html>

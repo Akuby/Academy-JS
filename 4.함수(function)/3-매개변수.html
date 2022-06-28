@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function sum1() {
+      let a = 10;
+      let b = 20;
+      let c = a + b;
+      return c;
+    }
+    console.log(sum1);
+
+    function sum2(a, b) {
+      let c = a + b;
+      return c;
+    }
+
+    console.log(sum2(100, 200));
+
+    // 매개변수 parameter
+    function info(name, area) {
+      document.write(`안녕하세요 ${name}입니다<br>`);
+      document.write(`사는 곳은 ${area}입니다<br>`);
+      document.write(`----------------------<br>`)
+    }
+    // 전달인자 argument
+    info("홍길동", "경기도");
+    info("이순신", "남해")
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
