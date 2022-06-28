@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수기본문법</title>
+  <script>
+    /*
+    함수란?
+    어떤 입력을 받아 특정한 기능이나 계산을 수행 후
+    값을 되돌려주는 코드
+    단, 입력이나 결과없이 특정 기능만 수행도 가능
+    함수를 실행하는 걸 보통 호출한다고 표현
+    */
+  //  선언값 함수
+    function test1() {
+      console.log("코드가 실행됩니다");
+      return;
+    }
+    test1();
+    function test2() {
+      return;
+      console.log("실행되지 않는 코드입니다");
+    }
+    test2();
+    function test3() {
+      console.log("코드가 실행됩니다333");
+      test1();
+    }
+    test3();
+    
+    // 익명함수, 무명함수
+    let test4 = function() {
+      console.log("4번째 코드가 실행됩니다")
+    }
+    test4()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

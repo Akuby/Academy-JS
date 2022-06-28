@@ -8,7 +8,7 @@
   <title>논리연산자</title>
   <script>
     // 두개 이상의 비교(관계)연산자의 값을 이용하여 boolean 값으로 반환
-    // &&, ||, 
+    // &&, ||, !
     let a = 1,
       b = 2,
       c = 3,
@@ -24,13 +24,21 @@
     console.log(a < b || c > d) // true
     console.log(a > b || c > d) // false
 
-    console.log( !(a>b) ); // true
-    
+    console.log(!(a > b)); // true
+
+    let height = 180;
+    let age = 20;
   </script>
 </head>
 
 <body>
-
+  <script>
+    let win = window.innerWidth;
+    console.log(win, typeof(win));
+    win > 1000 ? 
+    document.body.style.backgroundColor = "#47bfbc"
+    : document.body.style.backgroundColor = "#b16eee"
+  </script>
 </body>
 
 </html>

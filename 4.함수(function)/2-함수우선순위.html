@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수의 실행순서</title>
+  <script>
+    func1(); // 기본함수 실행. 무명함수는 선언 전에 호출할 수 없다.
+    var func1 = function () { // 변수
+      document.write("무명함수입니다")
+    }
+    function func1 () { // 함수
+      document.write("기본함수입니다")
+    }
+    func1(); // 무명함수 실행. 변수가 함수보다 우선순위가 높기 때문.
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
