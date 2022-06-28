@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>산술연산자</title>
+</head>
+<body>
+  <script>
+    // 산술연산자는 숫자를 계산하는 연산자
+    // ex) 덧셈, 뺄셈, 곱셈, 나눗셈
+    // let a = 5; b = 3;
+    // console.log(a+b);
+    // 연산자(+,-, /, *)와 피연산자(a, b)
+    // 피연산자가 하나면 단항연산자
+    // 피연산자가 두개면 이항연산자 (다항연산자)
+
+    let num = 1;
+    // num = num + 1;
+    // num += 1;
+    // num++; 
+    // 헷갈리지 말자. ++은 대입연산자가 포함된 식이다.
+    // 식이 짧을수록 ( 연산자가 적을 수록 ) 빨리 처리된다.
+    // console.log(num);
+    // console.log(num+1);
+
+    // console.log(num); // 1
+    // console.log(++num); // 2 전위연산자
+    // console.log(num); // 2
+
+    console.log(num);
+    console.log(num++); // 1 후위연산자. 연산 전에 로그로 찍기 때문에 1이 출력.
+    console.log(num);
+  </script>
+</body>
+</html>

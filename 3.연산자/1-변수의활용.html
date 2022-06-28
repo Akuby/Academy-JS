@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수의 활용</title>
+</head>
+<body>
+  <script>
+    // 변수 활용 X
+    console.log(100);
+    console.log(100+10);
+    console.log((100+10)/10);
+    console.log((100+10)/10-10);
+    console.log(((100+10)/10-10)*10);
+
+    // 변수 활용 O
+    let a = 100;
+    a += 10;
+    a /= 10;
+    a -= 10;
+    a *= 10;
+    console.log(a);
+  </script>
+</body>
+</html>
