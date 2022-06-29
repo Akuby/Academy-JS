@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수예시</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: #489edb;
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <button>클릭</button>
+  <div>움직여라</div>
+</body>
+<script>
+  const btn = document.querySelector("button");
+  const div = document.querySelector("div");
+  let n = 0;
+  
+  function moving() {
+    if ( n >= 700 ) {
+      n = 0;
+    }
+    div.style.marginLeft = n + "px";
+    n += 100;
+    console.log(n);
+  }
+
+  btn.addEventListener("click", () => {
+    moving()
+  })
+</script>
+</html>

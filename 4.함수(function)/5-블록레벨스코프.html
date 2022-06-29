@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // console.log(count);
+    // var count; // 호이스팅 발생, undefined 할당.
+    
+    // console.log(count);
+    let count = 10; // let은 호이스팅 발생 X?
+    // console.log(count);
+
+    function counting( ) {
+      let count = 20; // 지역 변수로, 상단의 10인 count와는 별개로 인식.
+      return count;
+    }
+
+    console.log(counting()); // 함수 내부의 지역변수 count
+    console.log(count); // 전역변수 count
+
+    {
+      // 중괄호가 있는 여기는 블록!
+      // if, for문 등 중괄호 속이면 모두 해당
+      // 블록은 모두 별개로 작동.
+      let count = 30;
+      // 블록 내에서 선언한 변수는 블록 내에서만 유효.
+    }
+    console.log(count)
+
+    // console.log(count2);
+    const count2 = 10;
+
+    {
+      // 별개의 변수이므로 선언 가능
+      const count2 = 20;
+    }
+
+    // https://frogand.tistory.com/59 참고한 예시
+    let foo = 1;
+    {
+      console.log(foo);
+      // let foo = 2; 지역변수를 선언하고 하지않고의 차이가 오류의 유무를 결정한다.
+      // 다시한번 기억할 것은, let과 const는 호이스팅이 발생하지 않는 것처럼 보인다는 것이다.
+      // 선언 단계와 초기화 단계가 분리되어 진행되기 때문이다!
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

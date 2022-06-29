@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var count = 0;
+  myFnc() // count 2
+  function myFnc() {
+    // var count = 1;
+    // var 없이 선언하면 전역변수가 된다. 
+    // 선언이 아니고 그냥 기존 전역변수에 새 값을 넣어준다고 생각하자.
+    count = 1;
+    count++;
+    document.write("hello" + count, "<br>");
+  }
+  myFnc() // count 2
+  function theFnc() {
+    count++;
+    document.write("bye" + count,"<br>");
+  }
+  theFnc(); // count 3
+</script>
+</html>

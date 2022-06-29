@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>총합계출력</button>
+  <h1>세 과목 총합은?</h1>
+</body>
+  <script>
+    const h1 = document.querySelector("h1");
+    const btn = document.querySelector("button");
+
+    btn.addEventListener("click", () => {
+      grade(90, 80, 70)
+    })
+    
+    function grade(kor, math, eng) {
+      let total = kor + math + eng;
+      h1.innerText = `과목의 총 합계는 ${total}점`;
+    }
+</script>
+</html>
