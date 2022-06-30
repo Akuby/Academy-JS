@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(192, 251, 255);
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+<script>
+  const div = document.querySelector("div");
+  div.addEventListener("click", sizing)
+
+  function sizing () {
+    let random1 = Math.ceil(Math.random()*5)*100;
+    let random2 = Math.ceil(Math.random()*5)*100;
+    this.style.width = random1 + "px";
+    this.style.height = random2 + "px";
+
+}
+</script>
+</html>

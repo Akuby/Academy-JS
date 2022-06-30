@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+<script>
+  const div = document.querySelector("div");
+  // div.style.width는 못알아먹는다. clientWidth라고 js에서 쓰는 문법이 따로 있다.
+  let n = div.clientWidth;
+  // 함수명만 통째로
+  div.addEventListener("click", sizing)
+
+  // 함수명만 통째로 대입할 때는, this 사용 가능
+  function sizing () {
+    n += 50;
+    this.style.width = n + "px";
+    this.style.height = n + "px";
+
+}
+</script>
+</html>
