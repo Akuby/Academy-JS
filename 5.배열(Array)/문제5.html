@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경이미지 랜덤 변경</title>
+</head>
+<body>
+  <button class="btn">버튼 클릭 시 배경 이미지 랜덤변경</button>
+</body>
+<script>
+  // 버튼 클릭 시 정해진 색상 내에서 배경색을 랜덤하게 바꾸시오.
+  const btn = document.querySelector('.btn');
+  let colorList = ['url(../img/autumn.jpg)','url(../img/spring.jpg)','url(../img/summer.jpg)','url(../img/winter.jpg)']
+  
+  function colorChange () {
+    document.body.style.backgroundImage = colorList[Math.floor(Math.random()*4)]
+  }
+  btn.addEventListener('click', colorChange)
+</script>
+</html>
