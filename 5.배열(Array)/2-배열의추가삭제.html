@@ -11,19 +11,19 @@
 </body>
 <script>
   let word = ['a', 'b', 'c', 'd', 'e']
-  word.push('f');
-  word = word.concat(['g', 'h', 'i']); // concat도 배열에 사용가능하나, 다시 배열로 담아줄 것.
+  // word.push('f');
+  // word = word.concat(['g', 'h', 'i']); // concat도 배열에 사용가능하나, 다시 배열로 담아줄 것.
 
-  word.unshift("A"); // 맨 앞에 추가
+  // word.unshift("A"); // 맨 앞에 추가
 
-  word.splice(3, 0, "B") // 원하는 자리에 추가 (추가할 위치 인덱스, 제거할 원소 개수, 추가할 원소)
+  // word.splice(3, 0, "B") // 원하는 자리에 추가 (추가할 위치 인덱스, 제거할 원소 개수, 추가할 원소)
 
-  word.pop(); // 배열의 마지막 원소 삭제
-  let last = word.pop() // 으로 받아서 쓸 수도 있다. 이때, 타입은 string으로 들어온다.
+  // word.pop(); // 배열의 마지막 원소 삭제
+  // let last = word.pop() // 으로 받아서 쓸 수도 있다. 이때, 타입은 string으로 들어온다.
 
-  word.shift() // 배열의 첫번째 원소 삭제
+  // word.shift() // 배열의 첫번째 원소 삭제
 
-  wordSlice = word.slice(1, 3); // 복제를 시작할 인덱스, 복제를 끝낼 인덱스. 절대 개수가 아님!
+  wordSlice = word.slice(2, -1); // 복제를 시작할 인덱스, 복제를 끝낼 인덱스 - 1
   console.log(wordSlice)
   
   console.log(word)
@@ -33,8 +33,13 @@
   console.log(num);
   // 내림차순 정렬은 num.sort().reverse()
 
-  // 배열을 string으로
+  // 배열을 string으로.  join()
   word = word.join("-");
   console.log(word)
+
+  // string을 배열로.  split()
+  let str = "Hello, JavaScript!";
+  let strArr = str.split(","); // split(배열에 넣을 때, 기준으로 할 글자). 비우면 한 글자씩 모두 들어간다.
+  console.log(strArr)
 </script>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let subway1 = ['교대', '방배', '강남'];
+    let subway2 = ['미금', '정자', '수서'];
+
+    subway1.splice(2, 1, '서초', '역삼') // 교대, 방배, 서초, 역삼
+    let data1 = subway1.pop(); // 역삼
+    let data2 = subway1.shift(); // 교대
+
+    subway2.push(data2); // 미금, 정자, 수서, 교대
+    subway2.unshift(data1); // 역삼, 미금, 정자, 수서, 교대
+
+    let answer = prompt("최종 subway2를 입력하시오", "공백없이 콤마 구분")
+    if (answer == subway2) {alert('정답입니다!')}
+    else {alert('정답이 아닙니다.')}
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

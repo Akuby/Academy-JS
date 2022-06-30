@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let greenLine = ['사당', '교대', '방배', '강남'];
+  let yellowLine = ['미금', '정자', '모란', '수서'];
+
+  greenLine.pop()
+  greenLine.push("삼성");
+  greenLine.shift();
+  greenLine.unshift("신도림");
+
+  let answer = prompt("최종결과를 입력하시오", "ex)삼성,신도림")
+  if (answer == greenLine) {alert('정답입니다!')}
+  else {alert('정답이 아닙니다.')}
+</script>
+</html>

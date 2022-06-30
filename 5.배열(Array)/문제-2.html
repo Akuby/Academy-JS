@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let subway1 = ['사당', '교대', '방배', '강남'];
+    let subway2 = ['신사', '압구정', '옥수'];
+
+    let result = subway1.join("-"); // 사당-교대-방배-강남
+    result = subway1.concat(subway2); // 사당, 교대, 방배, 강남, 신사, 압구정, 옥수
+    result = subway1.slice(1,3); // 교대, 방배
+
+    let answer = prompt("최종 result값을 입력하시오", "ex)삼성,신도림")
+    if (answer == result) {alert('정답입니다!')}
+    else {alert('정답이 아닙니다.')}
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
