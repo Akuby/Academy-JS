@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  console.log(window.innerWidth) // 출력되는 창의 크기
+  console.log(window.outerWidth) // 브라우저 자체의 크기
+
+  function winColor () {
+    if (window.innerWidth > 1200) {
+      document.body.style.backgroundColor = "pink";
+    } else {
+      document.body.style.backgroundColor = "#C4DFAA";
+    }
+  }
+  winColor()
+</script>
+</html>

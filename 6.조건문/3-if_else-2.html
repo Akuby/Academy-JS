@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if else</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let score = parseInt(prompt("점수를 입력하세요"));
+  if (score > 100) {
+    document.write('<h1>점수를 잘못 입력했습니다.</h1>');
+  } else if ( score >= 90 ) {
+    document.write('<h1>아주 잘했어요!</h1>');
+  } else if ( score >= 80 ) {
+    document.write('<h1>잘했어요</h1>');
+  } else if ( score >= 70 ) {
+    document.write('<h1>조금 더 노력하면 잘할 수 있어요</h1>');
+  } else if ( score >= 60 ) {
+    document.write('<h1>좀 더 노력하세요</h1>');
+  } else {
+    document.write('<h1>많이 노력하세요</h1>');
+  }
+</script>
+</html>

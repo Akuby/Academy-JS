@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #galleryWrap {
+      text-align: center;
+    }
+
+    #galleryWrap figure {
+      height: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="galleryWrap">
+    <figure>
+      <img src="./images/pic_1.jpg" alt="" width="200" id="photo">
+    </figure>
+    <div>
+      <button>이전</button>
+      <button>다음</button>
+    </div>
+  </div>
+</body>
+<script>
+  const photo = document.getElementById("photo");
+  const btn = document.querySelectorAll("button"); // btn은 배열
+  let num = 1;
+
+  // function prevGallery() {
+  //   if (num == 1) {
+  //     num = 10
+  //   } 
+  //     num--;
+  //     photo.setAttribute('src', `images/pic_${num}.jpg`)
+  // }
+
+  // function nextGallery() {
+  //   if (num == 9) {
+  //     num = 0
+  //   } 
+  //     num++;
+  //     photo.setAttribute('src', `images/pic_${num}.jpg`)
+  // }
+  let state = true; // 함수를 하나로 통합할 경우, 두 버튼의 기능에 차이점을 주기 위해서 새로운 매개변수를 활용.
+  function gallery (state) {
+    if (state) {
+      if (num == 9) return // 실행할 구문이 한 줄일경우, 중괄호 없이 적을 수 있다.
+      num++;
+    }
+    else {
+      if (num == 1) return
+      num--;
+    }
+    // photo.setAttribute('src', `images/pic_${num}.jpg`) // 함수 방식
+    photo.src = `images/pic_${num}.jpg`; // 메소드 방식
+  }
+
+  btn[0].addEventListener('click', () => {
+    gallery(!state);
+  })
+  btn[1].addEventListener('click', () => {
+    gallery(state);
+  })
+</script>
+
+</html>

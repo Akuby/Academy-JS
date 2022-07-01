@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 흉내내기</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const id = 'admin';
+  const pw = '1234';
+  let userId = prompt("아이디를 입력하세요");
+    if (userId === id) {
+      let userPw = prompt("비밀번호를 입력하세요");
+      if (userPw === pw) {
+        window.location.href = "./loginSuccess.html"
+      } else {
+    window.location.href = "./loginError.html"
+  }}
+</script>
+</html>

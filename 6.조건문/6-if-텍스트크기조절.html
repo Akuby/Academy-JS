@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트 크기 조절</title>
+  <style>
+    p {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <button>크기+</button>
+  <button>크기-</button>
+  <p>텍스트 크기 조절</p>
+</body>
+<script>
+  let btn = document.querySelectorAll("button");
+  let p = document.querySelector("p");
+  let num = 16;
+  let state = true; // 버튼 기능을 구분해, 각각 다른 값을 전달할 매개변수
+  btn[0].addEventListener('click', () => {
+    // + 버튼 눌렀을 때
+    sizing(state);
+  })
+  btn[1].addEventListener('click', () => {
+    // - 버튼 눌렀을 때
+    sizing(!state);
+  })
+
+  function sizing(state) {
+    console.log(num, typeof(num))
+    if (state) {
+      if ( num < 70)
+      num += 10;
+    } else {
+      if ( num > 16)
+      num -= 10;
+    }
+    p.style.fontSize = `${num}px`
+  }
+</script>
+
+</html>

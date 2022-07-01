@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문 기본</title>
+</head>
+<body>
+  
+</body>
+<script>
+  'use strict'; // 엄격모드
+  // 조건문은 특정 조건에 대해서 반응하고 그것을 처리
+  // if문 / switch문
+  // if문은 특정 조건이 성립할 경우 해당 결과를 실행
+  if ( true ) {
+    console.log('참이면 구문 실행')
+  } 
+  if ( false ) { // 0, 빈문자열, null, undefined, NaN 등이 falsy
+    console.log('거짓이면 구문 실행 안함')
+  }
+
+  let walkNum = prompt('하루에 몇 보를 걸으시나요?');
+  if (walkNum >= 10000) {
+    document.write('<h1>좋은 습관을 가지고 계시군요</h1>')
+  } else {
+    document.write('<h1>조금 더 걸으세요</h1>')
+  }
+</script>
+</html>

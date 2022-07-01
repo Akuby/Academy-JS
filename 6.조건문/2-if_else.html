@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  let a = 10,
+    b = 20;
+  if (a < b) {
+    console.log('a는 b보다 작습니다')
+  } else if (a === b) {
+    console.log('a는 b보다 큽니다')
+  } else {
+
+  }
+  // let value = prompt("자바스크립트의 공식표준이름은 무엇일까요?");
+  // if ( value === "ECMAScript") {
+  //   document.write('<h1>정답입니다!</h1>');
+  // } else {
+  //   document.write('<h1>정답은 ECMAScript입니다.</h1>');
+  // }
+  function printYear() {
+
+
+    let year = parseInt(prompt('올해 년도는?'));
+    if (year === 2022) {
+      alert('정답입니다!')
+    } else if (year < 2022) {
+      alert('숫자를 좀 더 올려보세요')
+    } else {
+      alert('숫자를 좀 더 내려보세요')
+    }
+  }
+  printYear()
+</script>
+
+</html>
