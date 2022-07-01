@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤 과일 출력</title>
+</head>
+<body>
+  <button>과일선택</button>
+  <h1>선택한 과일은?</h1>
+</body>
+<script>
+  const btn = document.querySelector('button');
+  const h1 = document.querySelector('h1');
+  let fruits = ['수박', '참외', '딸기', '포도', '사과'];
+
+  btn.addEventListener('click', () => {
+    pick()
+  })
+
+  function pick () {
+    let num = prompt("숫자를 입력하세요(1~5)");
+    h1.innerText = fruits[num-1]; 
+    //prompt는 string을 뱉는다. 그러나 num에서 -1을 해줌으로 number로 변환이 된다.
+    //기억할 것은 string에서 - 연산은 number로 바뀌지만, + 연산은 뒤의 number까지 string이 된다는 점이다.
+    //innerText는 함수가 아니다... h1.innerText(fruits[num-1]) 로 썼다가 틀림.
+  }
+</script>
+</html>
