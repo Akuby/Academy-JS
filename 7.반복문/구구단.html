@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단 출력</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    .dans {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .dans p {
+      text-align: left;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button>나와라 구구단!</button>
+  <div class="dans""></div>
+</body>
+<script>
+  const btn = document.querySelector('button');
+  const dans = document.querySelector('.dans');
+  let multi = [], str = '';
+  let colors = ['#E99497', '#F3C583', '#E8E46E', '#B3E283', '#b6e2ff', '#8083d5', '#d0acff', '#ffd3ea']
+function gugudan () {
+  for ( let i = 2; i < 10; i++ ) {
+    for ( let j = 1; j < 10; j++ ) {
+      str += `${i} X ${j} = ${i * j}<br>`
+    }
+    let dan = document.createElement('p');
+    dan.setAttribute('style' , `background-color: ${colors[i-2]}`);
+    dan.innerHTML = str;
+    dans.appendChild(dan);
+    str = '';
+  }
+}
+btn.addEventListener('click', gugudan)
+</script>
+</html>
