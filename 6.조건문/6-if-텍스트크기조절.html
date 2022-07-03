@@ -21,7 +21,7 @@
 <script>
   let btn = document.querySelectorAll("button");
   let p = document.querySelector("p");
-  let num = parseInt(document.defaultView.getComputedStyle(p).getPropertyValue('font-size')) // 현재 p의 스타일을 받아와서 num값으로 설정
+  let num = parseInt(document.defaultView.getComputedStyle(p).getPropertyValue('font-size')) // 현재 p의 스타일을 받아와서 num값으로 설정, https://hi098123.tistory.com/293 참고!
   let state = true; // 버튼 기능을 구분해, 각각 다른 값을 전달할 매개변수
   btn[0].addEventListener('click', () => {
     // + 버튼 눌렀을 때
