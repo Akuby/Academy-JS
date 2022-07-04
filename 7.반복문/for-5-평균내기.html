@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과목평균</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // let subList = ['국어', '수학', '영어']
+
+  // function subject(list) {
+  //   let sum = 0;
+  //   for (let i = 0; i < list.length; i++) {
+  //     sum += parseInt(prompt(`${list[i]} 점수는?`));
+  //   }
+  //   return sum / list.length;
+  // }
+  // document.write(`세과목 평균 점수는 ${subject(subList)}점입니다.`)
+
+  let 과목 = ['국어', '수학', '영어']
+  
+  function 평균내기(과목배열) {
+    let 총합 = 0;
+    for ( let i = 0; i < 과목배열.length; i++ ) {
+      총합 += parseInt(prompt(`${과목배열[i]} 점수는?`));
+    }
+    let 평균 = 총합 / 과목배열.length;
+    return 평균;
+  }
+  document.write(`세과목 평균 점수는 ${평균내기(과목)}점입니다.`)
+</script>
+
+</html>
