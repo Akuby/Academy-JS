@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요일 출력</title>
+</head>
+<body>
+</body>
+  <script>
+    let date = new Date();
+    let week = date.getDay(); // 0 - 6 까지를 반환
+    let day = "";
+    switch (week) {
+      case 0 : day = "일요일"; break;
+      case 1 : day = "월요일"; break;
+      case 2 : day = "화요일"; break;
+      case 3 : day = "수요일"; break;
+      case 4 : day = "목요일"; break;
+      case 5 : day = "금요일"; break;
+      case 6 : day = "토요일"; break;
+    }
+    const h1 = document.createElement("h1");
+    document.body.appendChild(h1); 
+    h1.innerHTML = `오늘은 ${day}입니다.`
+  </script>
+</html>

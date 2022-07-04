@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>휠이벤트로 좌우스크롤  적용하기</title>
+    <style>
+      * { margin: 0; box-sizing: border-box; }
+      section { height: 100vh; }
+      #con2 { width: 500vw; height: 100vh; margin: 0 auto; background: #a4bfc9;
+              display: flex;
+              /* transform: rotate(-90deg);
+              overflow-y: scroll;
+              overflow-x: hidden; */
+      }
+      div { width: 100vw; height: 50vh; border: 1px solid #000;
+            /* transform: rotate(90deg); background: #c1be78 */
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <section id="con1"></section>
+    <section id="con2">
+      <div>컨텐츠1</div>
+      <div>컨텐츠2</div>
+      <div>컨텐츠3</div>
+      <div>컨텐츠4</div>
+      <div>컨텐츠5</div>
+    </section>
+    <section id="con3"></section>
+    <script>
+      $("body").on('wheel',function( delta) {
+        this.scrollLeft -= (delta * 30);
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>

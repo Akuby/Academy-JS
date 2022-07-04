@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <script>
+    const heading = document.querySelector("h1");
+    let areaName = prompt("지역명을 입력하세요.");
+    switch (areaName) {
+      case "서울" : areaNum = "02"; break;
+      case "경기" : areaNum = "031"; break;
+      case "부산" : areaNum = "051"; break;
+      case "대구" : areaNum = "053"; break;
+      case "제주" : areaNum = "041"; break;
+      default : areaNum = "등록되지 않은 지역";
+    }
+
+    document.write(`${areaName}의 지역번호는 ${areaNum} 입니다.`)
+</script>
+</body>
+<script>
+//   let n = parseInt(prompt("0, 1, 2 중 숫자를 입력하세요."));
+//   switch (n) {
+//     case 0 : document.write("0입니다");
+//     break;
+//     case 1 : document.write("1입니다");
+//     break;
+//     case 2 : document.write("2입니다");
+//     break;
+//     default : document.write("해당 숫자가 아닙니다");
+//   }
+// </script>
+</html>
