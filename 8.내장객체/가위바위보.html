@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위 바위 보</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  document.write("<h1>가위, 바위, 보 </h1>")
+  let com = (Math.ceil(Math.random() * 3));
+  document.write(`<img src='./image/math_img_${com}.jpg' alt='가위, 바위, 보'>`);
+
+  let user = prompt("가위, 바위, 보 중 선택하세요");
+  let userNum, result;
+  switch (user) {
+    case "가위" : {
+      userNum = 1
+    } break;
+    case "바위" : {
+      userNum = 2
+    } break;
+    case "보" : {
+      userNum = 3
+    } break;
+  }
+  
+  switch(com) {
+    case 1 : {
+      if ( userNum === 1) {
+        result = 'd';
+      } else if ( userNum === 2 ) {
+        result = 'w';
+      } else {
+        result = 'l';
+      }
+    } break;
+    case 2 : {
+      if ( userNum === 1) {
+        result = 'l';
+      } else if ( userNum === 2 ) {
+        result = 'd';
+      } else {
+        result = 'w';
+      }
+    } break;
+    case 3 : {
+      if ( userNum === 1) {
+        result = 'w';
+      } else if ( userNum === 2 ) {
+        result = 'l';
+      } else {
+        result = 'd';
+      }
+    }
+  }
+
+  if (result == 'w') {
+    alert('이겼다!');
+  } else if (result == 'l') {
+    alert('졌다..');
+  } else {
+    alert('비겼다.')
+  }
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  document.write("표현가능한 가장 큰 수 " + Number.MAX_VALUE + "<br>");
+  document.write("표현가능한 가장 작은 수 " + Number.MIN_VALUE + "<br>");
+  document.write("숫자가 아닌 수 " + Number.NaN + "<br>");
+  document.write("무한대 " + Number.POSITIVE_INFINITY + "<br>");
+  document.write("무한대 " + Number.NEGATIVE_INFINITY + "<br>");
+
+  let num1 = 70000;
+  // 지수표기법으로 소수점 n 자리만큼 문자형 데이터 반환
+  document.write(num1.toExponential(1), '<br>')
+
+  let num2 = 3.456789;
+  // 반올림하여 소수점 n자리까지 문자형 데이터 반환
+  document.write(num2.toFixed(2), '<br>')
+  // 유효숫자 n의 개수만큼 반올림해서 문자형 데이터로 반환
+  document.write(num2.toPrecision(2), '<br>')
+
+  console.log(num2, typeof(num2))
+  num2 = num2.toString() // 숫자를 문자로
+  console.log(num2, typeof(num2))
+
+  let num3 = "30.5px";
+  document.write(parseFloat(num3), '<br>');
+  document.write(typeof(parseFloat(num3)), '<br>');
+  document.write(parseInt(num3), '<br>');
+  document.write(typeof(parseInt(num3)), '<br>');
+</script>
+</html>
