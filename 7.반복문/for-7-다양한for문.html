@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다양한 for문</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let arr = [3, 4, 5];
+
+  // 일반(고전) for
+  for (let i = 0; i < arr.length; i++ ) {
+    document.write(arr[i] + " ");
+  }
+
+document.write("<br>-------------------------------<br>")
+
+// for in
+for (i in arr) {
+  document.write(arr[i] + " <br>");
+}
+let obj = { name: "이순신", age: 30 }
+
+for ( i in obj ) {
+  document.write(i + obj[i] + " ")
+}
+
+document.write("<br>-------------------------------<br>")
+  
+
+// for of
+let arr2 = [3, 5, 7];
+for (key in arr2) { // 0, 1, 2 in을 쓰면 객체의 키값을,
+  console.log(arr2[key])
+}
+for (key of arr2) { // 3, 5, 7 of를 쓰면 객체의 밸류값을.
+  console.log(key)
+}
+
+
+document.write("<br>-------------------------------<br>")
+
+
+// forEach
+let items = ['item1', 'item2', 'item3'] 
+items.forEach(function(item){ // 매개변수로 하나씩 꺼내서, 함수를 적용한다.
+  document.write(item + " ")
+})
+</script>
+</html>

@@ -33,11 +33,11 @@
   for ( let i = 0; i < div.length; i++ ) {
     div[i].style.backgroundColor = "#c8cbff";
   }
-  for ( let i = 0; i < btn.length; i++ ) { // 여기서 var를 쓰면
-    btn[i].addEventListener('click', () => { // eventlistener는 for문 실행 당시가 아닌 for문이 다 끝나고 실행되기 때문에
-      heading.innerText = btn[i].innerText; // 버튼 클릭 시 들어가는 i는 3이 되고, btn[3]은 없는 값이기 때문에 오류가 출력.
-    })
-  }
+  // for ( var i = 0; i < btn.length; i++ ) { // 여기서 var를 쓰면
+  //   btn[i].addEventListener('click', () => { // eventlistener는 for문 실행 당시가 아닌 for문이 다 끝나고 실행되기 때문에
+  //     heading.innerText = btn[i].innerText; // 버튼 클릭 시 들어가는 i는 3이 되고, btn[3]은 없는 값이기 때문에 오류가 출력.
+  //   })
+  // }
   for ( let i = 0; i < btn.length; i++ ) { // 여기서 let을 쓰면
     btn[i].addEventListener('click', () => { // let은 블럭 스코프를 가지기 때문에, for문 내 값을 그대로 전달해줄 수 있음. 
       heading.innerText = btn[i].innerText; 
@@ -45,4 +45,4 @@
   }
   
 </script>
-</html>
+</html>       

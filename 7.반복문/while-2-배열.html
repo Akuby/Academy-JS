@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while문을 이용한 배열출력</title>
+<style>
+  .blue { color: #00f;}
+  .red { color: #f00; }
+</style>
+</head>
+<body>
+</body>
+<script>
+  let i = 20;
+  while (i >= 10) {
+    if (i % 2 == 0) {
+      document.write(`<p class='blue'>${i}</p>`)
+    }
+    else {
+      document.write(`<p class='red'>${i}</p>`)
+    }
+    i--;
+  }
+</script>
+</html>
