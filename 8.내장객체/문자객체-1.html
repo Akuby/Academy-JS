@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자객체</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let string = "Hello Thank you good luck to you";
+  document.write(string.length, '<br>');
+  document.write(string.charAt(16), '<br>');
+  document.write(string[16], '<br>');
+  document.write("---indexof---" + "<br>"); // 문자열의 인덱스 넘버를 반환. 없으면 -1 반환.
+  document.write(string.indexOf('you') + '<br>');
+  document.write(string.indexOf('you', 20) + '<br>'); //index 20번 이후에 나오는 you를 반환
+  document.write(string.lastIndexOf('you')+"<br>"); // 문자열의 끝에서부터 찾아나간다.
+  document.write("---includes---<br>");
+  document.write(string.includes('you'),"<br>");
+  document.write(string.includes('me'),"<br>");
+  document.write("---search---<br>"); // 정규표현식 사용 가능
+  document.write(string.search('you'),'<br>');
+  document.write(string.search('your'),'<br>');
+  document.write("---match---<br>");
+  document.write(string.match('luck'), '<br>'); // 있으면 해당 문자열 반환
+  document.write(string.match('lucky'), '<br>'); // 없으면 null 반환
+  document.write("---practice---<br>");
+  document.write(string.substr(6, 5) + "<br>");
+  document.write(string.substring(6, 11) + "<br>");
+  document.write(string.substr(string.indexOf('Thank'), 'Thank'.length)+'<br>')
+  document.write(string.match('Thank')+'<br>');
+  document.write("---replace---<br>"); // 정규표현식 사용 가능
+  document.write(string.replace(/you/g, 'me')+'<br>');
+  document.write(string.replaceAll('you', 'me')+'<br>');
+  document.write("---대소문자---<br>")
+  document.write(string.toUpperCase() + '<br>');
+  document.write(string.toLowerCase() + '<br>')
+</script>
+</html>
