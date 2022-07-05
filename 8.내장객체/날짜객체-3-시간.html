@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>시간출력</h1>
+</body>
+<script>
+  let h1 = document.querySelector('h1');
+  function clock() {
+  let today = new Date();
+  let hour = today.getHours();
+  let minute = today.getMinutes();
+  let second = today.getSeconds();
+  h1.innerHTML = `${hour} : ${minute} : ${second}`
+}
+clock();
+setInterval(clock, 10);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜객체</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let day = new Date();
+  console.log(day)
+  let month = day.getMonth()+1; // 0-11 현재 달 + 1
+  console.log(month)
+  let date = day.getDate();
+  console.log(date)
+  let date2 = day.getDay(); // 0-6 일-토
+  console.log(date2)
+
+  // 특정한 날 객체 생성
+  let mDay = new Date(2002, 4, 31);
+  console.log(mDay)
+  document.write(`2002년 월드컵은 ${mDay.getMonth()+1}월  ${mDay.getDate()}일 개최되었다.`)
+
+  let tDay = new Date(2020, 12, 35); // 그 달에 없는 날을 출력하면 이월된다. 월도 마찬가지.
+  console.log(tDay)
+</script>
+</html>

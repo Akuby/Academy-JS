@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜객체</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let today = new Date();
+  let bDay = new Date(1997, 6, 21);
+  let days = Math.floor((today - bDay) / (24*60*60*1000)); // ms 단위로 반환되기 때문에 1000을 곱해준다.
+  document.write(`태어난지 ${days}일이 지났습니다.<br>`)
+
+  let last = new Date(2022, 8, 2);
+  document.write(`수료까지 ${Math.ceil((last - today) / 86400000)}일이 남았습니다.`) // 디데이는 오늘까지 카운트, 올림해주기.
+
+</script>
+</html>
