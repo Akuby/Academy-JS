@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval()</title>
+  <style>
+    h1 {
+      opacity: 1;
+      transition: 1s;
+    }
+  </style>
+</head>
+<body>
+  <h1>딜레이 시간을 적용합니다.</h1>
+  <button>멈춤</button>
+  <button>재생</button>
+  <script>
+    const heading = document.querySelector('h1');
+    const btn = document.querySelectorAll('button');
+    // setTimeout(() => { // n초 후에 실행
+    //   heading.style.opacity = 1;
+    // }, 1000);
+
+    let i = 1;
+    let timer = setInterval(() => { // n초마다 반복실행
+      heading.innerHTML = i++;
+    }, 1000);
+
+    btn[0].addEventListener('click', () => {
+      clearInterval(timer) // clearInterval은 함수가 아닌 변수를 담는다.
+    })
+
+    btn[1].addEventListener('click', () => { // 그냥 함수명만 넣으니 안되네.
+      timer = setInterval(() => {
+      heading.innerHTML = i++;
+    }, 1000);
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>2초 뒤에 네이버로 이동합니다.</h1>
+</body>
+<script>
+  console.log(location.href)
+  console.log(location.protocol)
+  console.log(location.hostname)
+  console.log(location.port)
+  console.log(location.pathname)
+  setTimeout(() => {
+    location.href = "https://www.naver.com"
+  }, 2000);
+</script>
+</html>
