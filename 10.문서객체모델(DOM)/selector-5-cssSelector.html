@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css Selector</title>
+</head>
+
+<body>
+  <ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li>JavaScript</li>
+  </ul>
+</body>
+<script>
+  // get ~ 보다는 조금 느리기 때문에 id는 getElementById 가 더 유용.
+  // 현업에서는 querySelector, querySelectorAll, getElementById를 주로 사용.
+  const ul = document.querySelector('ul'); // css 선택자 모두 사용 가능
+  const li = document.querySelectorAll('li');
+  console.log(ul);
+  console.log(li);
+  const active = document.querySelectorAll('.active');
+  console.log(active);
+  active[0].style.color = "red";
+</script>
+
+</html>

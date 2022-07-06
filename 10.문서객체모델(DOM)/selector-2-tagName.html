@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소접근 tagName</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+</body>
+<script>
+  let ul = document.getElementsByTagName('ul'); // 모든 태그를 배열로 받는다.
+  console.log(ul);
+  ul[0].style.backgroundColor = "#eee6aa"
+
+  let li = document.getElementsByTagName('li');
+  console.log(li);
+  for ( let i = 0; i < li.length; i++ ) {
+    li[i].style.color = "#f00"
+  }
+  </script>
+</html>
