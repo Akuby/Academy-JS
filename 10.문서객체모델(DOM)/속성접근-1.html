@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성제어</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="target" class="active">
+    <a href="#">네이버</a>
+  </div>
+</body>
+<script>
+  const div = document.getElementById('target');
+
+  //속성값 가지기
+
+  // let idName = div.getAttribute('id');
+  let idName = div.id;
+  // let className = div.getAttribute('class');
+  let className = div.className; // java 등의 class 개념과 구분위해 네이밍이 다름.  
+
+
+  //속성값 변경
+
+  div.setAttribute('class', 'on');
+  div.setAttribute('id', 'on');
+
+  const anchor = document.querySelector('a');
+
+  // anchor.setAttribute('href', 'https://www.naver.com');
+  // anchor.setAttribute('target', '_blank');
+
+  anchor.href = "https://www.naver.com";
+  anchor.target = "_blank";
+  anchor.id = "naver";
+  anchor.className = "goLink";
+</script>
+
+</html>

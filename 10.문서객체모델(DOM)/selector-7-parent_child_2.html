@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>선호하는 음식</h1>
+    <div id="food_1">
+      <h2>한식</h2>
+      <ol>
+        <li>김치</li>
+        <li>비빔밥</li>
+      </ol>
+    </div>
+    <div id="food_2">
+      <h2>양식</h2>
+      <ol class="list_2">
+        <li>피자</li>
+        <li>파스타</li>
+      </ol>
+    </div>
+  </div>
+</body>
+<script>
+  const food1 = document.getElementById("food_1");
+  // const list2 = document.querySelector('.list_2');
+  // const list2 = document.querySelectorAll('.list_2')[0];
+  const list2 = document.getElementsByClassName('list_2')[0];
+  const food2 = list2.parentNode; // 부모요소는 결국 하나기 때문에 두 실행 결과가 같다.
+  const food2_1 = list2.parentElement;
+  console.log(food2, food2_1)
+</script>
+</html>

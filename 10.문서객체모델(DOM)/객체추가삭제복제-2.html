@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 추가삭제 예제</title>
+  <style>
+    div {
+      width: 500px;
+      height: 50px;
+      border: 1px solid #000;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>객체를 동적으로 추가, 삭제</h1>
+  <button>DIV 생성</button>
+</body>
+<script>
+  const btn = document.querySelector('button');
+  let newDIV;
+  let i = 0;
+  btn.addEventListener('click', createDIV);
+  function createDIV() {
+    i++;
+    // div 생성
+    newDIV = document.createElement('div');
+    // 생성한 div에 '새로 생성된 DIV 입니다' 텍스트 삽입
+    newDIV.innerText = `새로 생성된 DIV${i} 입니다.`
+    // body 내에 마지막 요소로 div 추가
+    document.body.append(newDIV);
+    newDIV.addEventListener('click', () => {
+      event.currentTarget.remove(); // 화살표 함수의 this는 상위요소를 가리킴, event 객체를 활용.
+    })
+  }
+</script>
+</html>

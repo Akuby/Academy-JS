@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>선호하는 음식</h1>
+    <div id="food_1">
+      <h2>한식</h2>
+      <ol>
+        <li>김치</li>
+        <li>비빔밥</li>
+      </ol>
+    </div>
+    <div id="food_2">
+      <h2>양식</h2>
+      <ol>
+        <li>피자</li>
+        <li>파스타</li>
+      </ol>
+    </div>
+  </div>
+</body>
+<script>
+  const food1 = document.getElementById("food_1");
+  // const food1_h = document.querySelectorAll('h2')[0];
+  // const food2_h = document.querySelectorAll('h2')[1];
+  // console.log(food1_h, food2_h)
+
+  const heading2 = food1.children[0];
+  console.log(heading2)
+
+  // 공백도 node기 때문에 코드 작성 시 입력한 엔터가 text노드로 출력된다.
+  // const heading2 = food1.childNodes[0]; // #text
+  // const heading2 = food1.childNodes[1]; 
+  // console.log(heading2)
+
+  // const heading2 = food1.firstChild; // firstChild도 노드.
+  // console.log(heading2)
+</script>
+</html>

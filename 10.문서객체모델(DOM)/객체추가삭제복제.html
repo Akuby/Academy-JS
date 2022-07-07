@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 추가 삭제 복제</title>
+</head>
+
+<body>
+  <div>
+    <h2>큰 제목이 필요합니다.</h2>
+  </div>
+  <a href="#">링크</a>
+</body>
+<script>
+  const div = document.querySelector('div');
+  const h2 = document.querySelector('h2');
+  const anchor = document.querySelector('a');
+
+  // 생성
+  const h1 = document.createElement('h1'); // 중요
+  h1.innerText = "제목을 추가했습니다.";
+
+  // 추가 및 이동
+  div.prepend(h1); //prepend = 부모의 첫번째 자식요소로 삽입
+  div.append(h1); // append = 부모의 마지막 자식요소로 삽입 ( 있는 요소에 지정할 경우 이동도 가능)
+  //div.appendChild(h1) // 하나의 노드만 추가, 텍스트는 에러
+  //div.appendChild("text") // error
+
+  document.body.insertBefore(anchor, div) // 부모요소.insertBefore(이동요소, 대상요소)
+
+  // 삭제
+  //h2.remove(); // 요소 자체를 삭제. 
+  // div.removeChild(h2) // 특정 div의 자식을 삭제. 둘 다 유용.
+
+  // 복제
+  const anchor2 = anchor.cloneNode(true); // .cloneNode(false가 기본값) : false시, 태그 내의 텍스트는 빼고 카피.
+  console.log(anchor2)
+  div.append(anchor2);
+</script>
+
+</html>

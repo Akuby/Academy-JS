@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성접근 2</title>
+</head>
+<body>
+  <h1 id="title">마우스아웃</h1>
+  <a href="#" id="btn">
+    <img src="./btn_out.gif" alt="버튼">
+  </a>
+  <p id="path">경로출력</p>
+</body>
+<script>
+  const title = document.getElementById('title');
+  const btn = document.getElementById('btn');
+  const path = document.getElementById('path');
+
+  // console.log(title, btn, path);
+
+  // mouseover / mouseout , mouseenter / mouseleave
+
+  btn.addEventListener('mouseenter', () => {
+    // title의 텍스트를 '마우스 인'으로 변경
+    title.innerText = "마우스 인"
+    // 이미지(children 활용)의 src 값을 btn_over.gif로 변경
+    // event.currentTarget.children[0].setAttribute('src', 'btn_over.gif') // 로도 작성 가능
+    event.currentTarget.children[0].src = './btn_over.gif'
+
+    path.innerHTML = btn.children[0].getAttribute('src'); // 현재 src에 담긴 경로
+    // path.innerHTML = btn.children[0].src; // 전체 경로 ( = 절대 경로 )
+  })
+
+  btn.addEventListener('mouseleave', () => {
+    title.innerHTML = "마우스아웃";
+    event.currentTarget.children[0].src = './btn_out.gif';
+    path.innerHTML = btn.children[0].getAttribute('src')
+  })
+</script>
+</html>
