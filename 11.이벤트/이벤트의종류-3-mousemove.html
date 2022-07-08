@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mousemove</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      margin: 50px 0 0 50px;
+      border: 1px solid #000;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const div = document.querySelector('div');
+      const p = document.querySelectorAll('p');
+      div.addEventListener('mousemove', (e) => {
+        p[0].innerHTML = `screenX : ${e.screenX} screenY : ${e.screenY}`;
+        p[1].innerHTML = `pageX : ${e.pageX} pageY : ${e.pageY}`; // 문서기준
+        p[2].innerHTML = `clientX : ${e.clientX} clientY : ${e.clientY}`; // 보이는 화면 기준
+        p[3].innerHTML = `offsetX : ${e.offsetX} offsetY : ${e.offsetY}`; // div 자체
+        p[4].innerHTML = `X : ${e.x} Y : ${e.y}`; // = clientX, Y랑 같음 
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>마우스 위치 알아내기</div>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+</body>
+</html>
