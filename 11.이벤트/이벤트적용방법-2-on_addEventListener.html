@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>on과 addEventListener의 차이</title>
+</head>
+<body>
+  <h1>이벤트</h1>
+  <button>버튼</button>
+</body>
+<script>
+  heading = document.querySelector('h1');
+  btn = document.querySelector('button');
+  let test1 = () => {
+    alert('test1')
+  }
+  let test2 = () => {
+    alert('test2')
+  }
+  // btn.onclick = test1; // 중복 수행 무시
+  // btn.onclick = test2;
+  // btn.addEventListener('click', test1) // 차례로 모두 실행
+  // btn.addEventListener('click', test2)
+
+  let n = 32;
+  let test3 = () => {
+    n += 5;
+    heading.style.fontSize = `${n}px`
+  }
+
+  // btn.onclick = test3;
+  // btn.onmouseover = test3; // 각각 하나씩 적어줘야함
+
+  ['mouseover', 'click'].map( e => { // 여러개의 이벤트 넣기 가능
+    btn.addEventListener(e, test3)
+  })
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 실행위치</title>
+<!-- 
+
+  내부 css 적용 시,
+  document.addEventListener('DOMContentLoaded',()=>{}) 사용 가능
+  DOM의 컨텐츠가 모두 로드되었을 때, 실행
+
+  외부 css 적용 시,
+  defer : 모든 DOM 로드 후 실행
+  async : 이벤트 적용 대상 로드 시, 실행
+
+-->
+
+
+
+
+  <script src="./event.js" async></script> <!--defer는 모든 DOM 로드 후 실행, async는 이벤트 적용 대상 로드 시, 그때 실행 -->
+  <!-- <script>
+    alert('1');
+    window.onload = function () { // 거의 사용하지 않음
+      alert('5');
+      // const div = document.querySelector('div');
+      // div.style.color = 'red';
+    }
+
+    window.addEventListener('load', () => {
+      alert('6');
+      // const div = document.querySelector('div')
+      // div.style.color = 'red'
+    })
+
+    window.addEventListener('DOMContentLoaded', () => {
+      alert('4');
+      // const div = document.querySelector('div')
+      // div.style.color = 'red'
+    })
+
+    document.addEventListener('DOMContentLoaded', () => { // 가장 빠르다!
+      alert('3');
+      // const div = document.querySelector('div')
+      // div.style.color = 'red'
+    })
+  </script> -->
+</head>
+
+<body>
+  <div>색상적용</div>
+  <!-- <script src="./event.js"></script> -->
+  <!-- <script>
+    alert('2');
+    // const div = document.querySelector('div');
+    // div.style.color = 'red';
+  </script> -->
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="changeColor1()">적용1</button>
+  <button>적용2</button>
+  <button>적용3</button>
+</body>
+<script>
+  const btn = document.querySelectorAll('button');
+  let changeColor1 = () => {
+    document.body.style.backgroundColor = "skyblue"
+  }
+  let changeColor2 = () => {
+    document.body.style.backgroundColor = "orange"
+  }
+  let changeColor3 = () => {
+    document.body.style.backgroundColor = "yellowgreen"
+  }
+  btn[1].onclick = changeColor2;
+  btn[2].addEventListener('click', changeColor3)
+</script>
+</html>

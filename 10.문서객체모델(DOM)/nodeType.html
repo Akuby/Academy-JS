@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nodeType</title>
+</head>
+<body>
+  <a href="#">이동</a>
+</body>
+<script>
+  const anchor = document.querySelector('a');
+  //anchor.nodeType == 1 ? console.log("요소 노드입니다.") : console.log("false");
+  anchor.getAttributeNode('href').nodeType == 2 ? console.log("속성 노드입니다.") : console.log("속성이 아닙니다");
+  console.log(anchor);
+
+
+  for ( let name in Node ) {
+    console.log( name, Node[name] )
+  }
+</script>
+</html>
