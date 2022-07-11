@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>스크롤이벤트</title>
+    <style>
+      body { height:  300vh; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('scroll', () => {
+          
+          if (window.scrollY >= 1000) {
+            document.body.style.background = "lightgray"
+          }
+          else {
+            document.body.style.background = "white"
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

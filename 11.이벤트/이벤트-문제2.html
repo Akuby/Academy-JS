@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열을 활용한 배경색 적용</title>
+  <style>
+    body {
+      display: flex;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+  </style>
+  <script>
+    // 문제 1과 동일, 배열 없이 태그의 속성을 가져와서 컬러로 넣어주기
+    document.addEventListener('DOMContentLoaded', () => {
+      const div = document.querySelectorAll('div');
+      for ( let i = 0; i < div.length; i++ ) {
+        div[i].addEventListener('click', e => {
+          let colorData = e.currentTarget.getAttribute('data-color'); // getAttribute 잘 기억하기
+          e.currentTarget.style.backgroundColor = colorData;
+        })
+      }
+
+      // })
+    })
+
+  </script>
+</head>
+<body>
+  <!-- 사용자 정의 속성 -->
+  <!-- https://velog.io/@gga01075/HTML%ED%83%9C%EA%B7%B8%EC%97%90-%EB%82%98%EB%A7%8C%EC%9D%98-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%86%8D%EC%84%B1-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0-ppec05qv -->
+  <div data-color="red">빨강</div>
+  <div data-color="yellow">노랑</div>
+  <div data-color="yellowgreen">초록</div>
+  <div data-color="blue">파랑</div>
+</body>
+</html>

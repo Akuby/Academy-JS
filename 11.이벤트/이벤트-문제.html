@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열을 활용한 배경색 적용</title>
+  <style>
+    body {
+      display: flex;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+  </style>
+  <script>
+    let colorList = ['red', 'yellow', 'yellowgreen', 'blue'];
+    document.addEventListener('DOMContentLoaded', () => {
+      const div = document.querySelectorAll('div');
+      // for ( let i = 0; i < div.length; i++ ) {
+      //   div[i].addEventListener('click', e => {
+      //     e.currentTarget.style.backgroundColor = colorList[i];
+      //   })
+      // }
+
+      div.forEach((div, i) => {
+        div.addEventListener('click', (e) => {
+          e.currentTarget.style.backgroundColor = colorList[i]
+        })
+      })
+    })
+
+  </script>
+</head>
+<body>
+  <div>빨강</div>
+  <div>노랑</div>
+  <div>초록</div>
+  <div>파랑</div>
+</body>
+</html>
