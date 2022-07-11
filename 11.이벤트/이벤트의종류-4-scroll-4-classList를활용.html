@@ -70,7 +70,8 @@
       // 윈도우의 스크롤 위치가 500일 경우 nav를 윈도우 상단에 고정하기
       window.addEventListener('scroll', () => {
         window.scrollY >= 500 ? nav.classList.add('active') : nav.classList.remove('active'); // 오직 class만 classList로 중복정의 가능
-        })
+        // 대상element.classList.replace('이전class', '적용class')
+      })
       })
   </script>
 </head>
