@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>스크롤이벤트로 투명도 조절하기</title>
+  <style>
+    body {
+      height: 200vh;
+      background: #000;
+    }
+
+    div {
+      position: fixed;
+      top: 100px;
+      right: 100px;
+      width: 500px;
+      height: 500px;
+      background: #fff;
+      opacity: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const div = document.querySelector('div');
+      n = 0;
+      window.addEventListener('wheel', (e) => {
+        if (e.wheelDelta < 0) {
+          n += 0.05;
+          div.style.opacity = n;
+          if (n > 1) n = 1;
+          console.log(n)
+        } else {
+          n -= 0.05;
+          div.style.opacity = n;
+          if (n < 0) n = 0;
+          console.log(n)
+        }
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

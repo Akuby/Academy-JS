@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>resize 이벤트</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const heading = document.querySelector('h1');
+        let i = 0;
+        window.addEventListener('resize', () => {
+          // heading.innerText = i++;
+          heading.innerText = window.innerWidth;
+          // 윈도우넓이 1000을 기준으로 배경색이 바뀌도록
+          if ( window.innerWidth > 1000 ) {
+            document.body.style.background = "#a5ba99"
+          } else {
+            document.body.style.background = "#dadd57"
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <h1>카운팅</h1>
+  </body>
+</html>
