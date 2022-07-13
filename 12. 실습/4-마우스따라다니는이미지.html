@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>마우스 따라다니기</title>
+  <style>
+    img {
+      position: absolute;
+      animation: mouseMove 3s infinite;
+    }
+    @keyframes mouseMove {
+      to { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./cat.png" alt="고양이" width="100">
+  <script>
+    const img = document.querySelector('img');
+    let moving = (e) => {
+      //보이는 화면 기준인 clientX, Y 사용
+      img.style.left = `${e.clientX}px`;
+      img.style.top = `${e.clientY}px`;
+    }
+    document.addEventListener('mousemove', moving)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>마우스 변경</title>
+  <style>
+    * {
+      cursor: none;
+    }
+    div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+      opacity: .5;
+      position: absolute;
+      pointer-events: none; /*이벤트의 영향을 받지 않게 함*/
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://www.naver.com">클릭하여 이동하기</a>
+  <div></div>
+  <script>
+    
+    const div = document.querySelector('div');
+    let moving = (e) => {
+      //보이는 화면 기준인 clientX, Y 사용
+      div.style.left = `${e.clientX - 10}px`;
+      div.style.top = `${e.clientY - 10}px`;
+    }
+    document.addEventListener('mousemove', moving)
+  </script>
+</body>
+
+</html>
