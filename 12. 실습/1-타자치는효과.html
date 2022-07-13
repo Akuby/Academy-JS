@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>타자치는 효과</title>
+    <style>
+      div {
+        margin: 50px 0 0 50px;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text">Hello! JavaScript!</div>
+    <script>
+      let text = document.getElementById('text');
+      // let str = 'Hello! JavaScript!'.toUpperCase();
+      let str = text.innerText.toUpperCase();
+      text.innerText = '';
+      let i = 0;
+
+      // 1) setInterval 사용
+
+      // let txtAni = () => {
+      //   if ( i < str.length ) {
+      //   text.innerHTML += str[i]
+      //   i++;
+      //   }
+      // }
+      // setInterval(txtAni, 100);
+
+      // 2) setTimeout 사용
+
+      let txtAni = () => {
+        if ( i >= str.length ) return;
+        text.innerHTML += str[i];
+        i++;
+        setTimeout(txtAni, 100); // 재귀!
+        }
+      setTimeout(txtAni, 100); // 어떤 조건 아래서 제한적으로 반복할 경우, setTimeout 사용이 더 안정적일수 있다.
+    </script>
+  </body>
+</html>
