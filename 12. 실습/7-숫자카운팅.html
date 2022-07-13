@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>특정위치 숫자자동카운팅</title>
+  <style>
+    section {
+      height: 1000px;
+      background-color: #8cb063;
+    }
+
+    p {
+      width: 100px;
+      padding: 100px 0;
+      text-align: right;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <section></section>
+  <p>0</p>
+  <section></section>
+  <script>
+    const p = document.querySelector('p');
+    let n = 0;
+    let state = 1;
+    let counting = () => {
+      n++;
+      p.innerText = n;
+      if (n < 100) {
+        setTimeout(counting, 20);
+      }
+    }
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 800 && state === 1) {
+        state = 0; // 딱 한번만 수행하도록.
+        counting();
+      }
+    })
+  </script>
+</body>
+
+</html>
