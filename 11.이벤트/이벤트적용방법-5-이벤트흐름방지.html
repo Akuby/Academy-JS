@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 흐름 방지</title>
+    <style>
+      div { width: 100px; height: 100px; padding: 50px; border: 1px solid #000; }
+      p { width: 100px; height: 100px; margin: 0; border: 1px solid #000;
+          background: red; }
+    </style>
+  </head>
+  <body>
+      <div>
+        <p>클릭하세요</p>
+      </div>
+      <span>카운팅</span>
+      <script>
+        // div 클릭시 span의 텍스트 값이 1씩 증가하도록
+        const div = document.querySelector('div');
+        const pTag = document.querySelector('p');
+        const span = document.querySelector('span');
+        let n=0;
+        let counting = (e)=> {
+          span.innerText = ++n;
+          // pTag.style.background = "yellow"; // 직접 지정시 이벤트 흐름 X
+          e.currentTarget.style.background = "yellow";
+          e.stopPropagation(); // 이벤트 흐름이 부모에 전달되는 현상을 방지
+        }
+        div.addEventListener('click', counting)
+        pTag.addEventListener('click', counting)
+      </script>
+  </body>
+</html>

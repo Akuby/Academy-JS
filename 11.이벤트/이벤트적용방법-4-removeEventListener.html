@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>remove 이벤트</title>
+    <style>
+      div { width: 200px; height: 200px; border: 1px solid #000; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', ()=> {
+        const div = document.querySelector('div');
+        const btn = document.querySelectorAll('button');
+        let changeColor1 = ()=> {
+          div.style.background = "red";
+          btn[0].removeEventListener('click', changeColor1)
+        }
+        let changeColor2 = ()=> {
+          div.style.background = "blue";
+          btn[1].removeEventListener('click', changeColor2)
+        }
+        btn[0].addEventListener('click', changeColor1)
+        btn[1].addEventListener('click', changeColor2)
+      })
+    </script>
+  </head>
+  <body>
+    <div>색상변경</div>
+    <button data-bg="red">색상1</button>
+    <button data-bg="blue">색상2</button>
+  </body>
+</html>

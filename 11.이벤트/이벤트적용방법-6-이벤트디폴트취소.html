@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트 디폴트 취소</title>
+    <style>
+      div { width: 100px; height: 100px; border: 1px solid #000; }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.naver.com">네이버로 이동</a>
+    <div>색상변경</div>
+    <form>
+      <input type="checkbox">맥주
+      <input type="checkbox">음료
+    </form>
+    <script>
+      const anchor = document.querySelector('a')
+      const div = document.querySelector('div')
+      const check = document.querySelectorAll('input');
+      console.log(check)
+      // anchor.addEventListener('click', (e)=> {
+      //   e.preventDefault();
+      //   div.style.background = "yellow";
+      // })
+      anchor.addEventListener('click', (e)=> {
+        let naver = confirm('네이버로 이동하시겠습니까');
+        if (naver === false) e.preventDefault() // a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용. #을 넣으면 되지 않냐 생각했지만, 여전히 스크린은 최상단으로 올라간다.
+      })
+      let noCheck = (e)=> {
+        e.preventDefault();
+      }
+      check[0].addEventListener('click', noCheck)
+
+    </script>
+  </body>
+</html>
