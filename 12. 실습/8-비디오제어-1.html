@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>비디오제어하기</title>
+  </head>
+  <body>
+    <h1>자바스크립트로 비디오 제어</h1>
+    <video src="./bear.mp4" height="400"></video>
+    <br>
+    <button>play</button>
+    <button>pause</button>
+    <button>replay</button>
+    <button>vol-</button>
+    <button>vol+</button>
+    <button>mute on/off</button>
+    <script>
+      const video = document.querySelector('video');
+      const btn = document.querySelectorAll('button');
+
+      btn[0].addEventListener('click', () => { // play
+        video.play();
+      });
+      btn[1].addEventListener('click', () => { // pause
+        video.pause();
+      });
+      btn[2].addEventListener('click', () => { // replay
+        video.load();
+        video.play();
+      });
+      btn[3].addEventListener('click', () => { // volume -
+        // 볼륨값은 0에서 1사이
+        if (video.volume <= 0.11) {
+          video.volume = 0;
+        } else {
+          video.volume -= 0.1;
+        }
+        console.log(video.volume)
+      });
+      btn[4].addEventListener('click', () => { // volume +
+        if (video.volume >= 0.99) {
+          video.volume = 1;
+        } else {
+          video.volume += 0.1;
+        }
+        console.log(video.volume)
+      });
+      btn[5].addEventListener('click', () => { // mute on/off
+        video.muted = !video.muted
+        console.log(video.muted)
+      });
+    </script>
+  </body>
+</html>

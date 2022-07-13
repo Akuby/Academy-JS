@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>비디오제어하기</title>
+</head>
+
+<body>
+  <h1>자바스크립트로 비디오 제어</h1>
+  <video src="./sample.mp4" height="400"></video>
+  <br>
+  <button class="btnPlay">실행</button>
+  <script>
+    const video = document.querySelector('video');
+    const btn = document.querySelector('button');
+    let state = 0;
+    btn.addEventListener('click', () => {
+      if ( btn.className === 'btnPlay' ) {
+        btn.className = 'btnStop'
+        video.play();
+        btn.innerText = '일시정지'
+      } else {
+        btn.className = 'btnPlay'
+        video.pause();
+        btn.innerText = '실행'
+      }
+    })
+    // 조건으로 쓸 수 있는 요소
+    // 1. btn.innerText
+    // 2. state 변수
+    // 3. class명 (css를 고려해, 아마 사용 가능성이 제일 높을듯)
+  </script>
+</body>
+
+</html>
