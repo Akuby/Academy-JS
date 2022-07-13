@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>조별순서정하기</title>
+</head>
+
+<body>
+  <h1>조별발표 순서 정하기</h1>
+  <ol>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+  <button>순서정하기</button>
+  <script>
+    const list = document.querySelectorAll('li');
+    const btn = document.querySelector('button');
+    let present = () => {
+      let i = 0; // li의 인덱스 번호
+      let groupList = ['1조', '2조', '3조', '4조', '5조'];
+      while (groupList.length > 0) {
+        //그룹리스트 인덱스 랜덤 번호
+        let num = Math.floor(Math.random() * groupList.length);
+        list[i].innerText = groupList[num];
+        groupList.splice(num, 1);
+        i++;
+      }
+    }
+    btn.addEventListener('click', present)
+  </script>
+</body>
+
+</html>
