@@ -52,8 +52,6 @@ li {
 }
 
 /* gnb */
-#gnb {}
-
 #gnbList {
   display: flex;
   justify-content: space-between;
@@ -65,9 +63,19 @@ li {
   width: 200px;
   padding-top: 30px;
 }
+#gnbList > li:hover {
+  height: 300px;
+  background: rgba(157, 192, 162, 0.7);
+}
+#gnbList > li:hover a {
+  color: white;
+}
 #gnbList > li > a {
   display: block;
   height: 50px;
+}
+.snb li:hover a {
+  text-decoration: underline;
 }
 /* snb */
 .snb {
