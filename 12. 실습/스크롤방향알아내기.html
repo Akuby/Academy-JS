@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>스크롤 방향 알아내기</title>
+    <style>
+      body {
+        height: 300vh;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script>
+      console.log(window.scrollY)
+      console.log(document.documentElement.scrollTop)
+      let winScrollPos = document.documentElement.scrollTop;
+      document.addEventListener('scroll', () => {
+        let documentY = document.documentElement.scrollTop;
+        if (documentY - winScrollPos >= 0) {
+          document.body.style.background = '#50bfbc';
+        } else {
+          document.body.style.background = '#ccc';
+        }
+        winScrollPos = documentY;
+      }
+      )
+</script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>스크롤 방향을 이용한 애니메이션</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <section data-bg="#bfbab2"></section>
+  <section data-bg="#446067"></section>
+  <section data-bg="#161616">
+    <div>
+
+    </div>
+  </section>
+  <script>
+    const section = document.querySelectorAll('section');
+    const div = document.querySelector('div');
+    section.forEach((section) => {
+      section.style.backgroundColor = section.getAttribute('data-bg')
+    })
+    // 요소의 높이가 vh기 때문에, 브라우저 창의 크기에 따라 애니메이션이 시작될 값도 달라진다. 이를 위해 필요한 것이...
+    console.log(section[2].offsetTop) // 요소의 현재 위치. = position의 top 위치.
+    let winScrollPos = document.documentElement.scrollTop;
+    let num = 1;
+    window.addEventListener('scroll', (e) => {
+      let documentY = document.documentElement.scrolltop;
+      // 조건에 맞을 경우 scale을 이용해서 div 넓이 300px 적용
+      if(window.scrollY >= (section[2].offsetTop-500)) {
+        num += 0.1
+        div.style.transform = `scale(${num})`
+      } else {
+        num -= 0.1
+        div.style.transform = `scale(1)`
+      }
+      winScrollPos = documentY
+    })
+  </script>
+</body>
+
+</html>
