@@ -19,6 +19,7 @@
       height: 100px;
       background-color: #fff;
       border-radius: 50%;
+      background: url(./bg.jpg) no-repeat center / cover;
     }
   </style>
 </head>
@@ -42,14 +43,20 @@
     let winScrollPos = document.documentElement.scrollTop;
     let num = 1;
     window.addEventListener('scroll', (e) => {
-      let documentY = document.documentElement.scrolltop;
+      let documentY = document.documentElement.scrollTop;
       // 조건에 맞을 경우 scale을 이용해서 div 넓이 300px 적용
-      if(window.scrollY >= (section[2].offsetTop-500)) {
-        num += 0.1
-        div.style.transform = `scale(${num})`
+      if(window.scrollY > (section[2].offsetTop-300)) {
+        if(documentY - winScrollPos >= 0){
+          num += 0.15
+          div.style.transform = `scale(${num})`}
+        else {
+          num -= 0.12
+          div.style.transform = `scale(${num})`
+          if ( num < 1 ) num = 1;
+        }
       } else {
-        num -= 0.1
         div.style.transform = `scale(1)`
+        num = 1;
       }
       winScrollPos = documentY
     })
