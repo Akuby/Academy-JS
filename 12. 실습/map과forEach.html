@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>배열반복문 map</title>
+  </head>
+  <body>
+    <script>
+      // map()은 함수실행결과를 새로운 배열로 만들 때 사용!
+      // let arr =[1, 2, 3, 4, 5];
+      // let newArr = arr.forEach(e => {
+      //   return e
+      // })
+      // console.log(newArr)
+
+      // let arr1 = [1,2,3,4,5];
+      // let newArr1 = [];
+      // arr1.forEach(num => { // forEach가 배열 자체를 생성하는 기능이 없다면,
+      //   newArr1.push(num)
+      // })
+      // console.log(newArr1)
+
+      // let arr2 = [1, 2, 3, 4, 5]; // 배열 활용 시에만 사용
+      // let newArr2 = arr2.map((n) => { // map은 새로운 배열을 만들어서 돌려준다.
+      //   return n + 1
+      // })
+      // console.log(newArr2)
+
+      // let newArr3 = arr2.map(n => {
+      //   return n*3
+      // })
+      // console.log(newArr3)
+
+      const arr = [10, 20, 30, 40 ,50]
+      // 기본 for문 (고전)
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+      }
+      // for of 문 (축약형 for문)
+      for(let i of arr) {
+        console.log(i);
+      }
+      // for in 문
+      for ( let i in arr ) {
+        console.log(arr[i])
+      }
+      // forEach 사용
+      arr.forEach(e => {
+        console.log(e)
+      });
+      // map 사용
+      arr.map(n => {
+        console.log(n)
+      })
+    </script>
+  </body>
+</html>

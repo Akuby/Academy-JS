@@ -19,14 +19,14 @@
       const div = document.querySelector('div')
       const check = document.querySelectorAll('input');
       console.log(check)
-      // anchor.addEventListener('click', (e)=> {
-      //   e.preventDefault();
-      //   div.style.background = "yellow";
-      // })
       anchor.addEventListener('click', (e)=> {
-        let naver = confirm('네이버로 이동하시겠습니까');
-        if (naver === false) e.preventDefault() // a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용. #을 넣으면 되지 않냐 생각했지만, 여전히 스크린은 최상단으로 올라간다.
+        e.preventDefault();
+        div.style.background = "yellow";
       })
+      // anchor.addEventListener('click', (e)=> {
+      //   let naver = confirm('네이버로 이동하시겠습니까');
+      //   if (naver === false) e.preventDefault() // a 태그 처럼 클릭 이벤트 외에 별도의 브라우저 행동을 막기 위해 사용. #을 넣으면 되지 않냐 생각했지만, 여전히 스크린은 최상단으로 올라간다.
+      // })
       let noCheck = (e)=> {
         e.preventDefault();
       }
